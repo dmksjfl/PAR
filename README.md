@@ -1,5 +1,7 @@
 # Cross-Domain Policy Adaptation by Capturing Representation Mismatch (ICML 2024)
 
+**Authors:** [Jiafei Lyu](https://dmksjfl.github.io/), [Chenjia Bai](https://baichenjia.github.io/), Jingwen Yang, [Zongqing Lu](https://z0ngqing.github.io/), Xiu Li
+
 ## Brief Introduction
 We consider dynamics adaptation settings where there exists dynamics mismatch between the source domain and the target domain, and one can get access to sufficient source domain data, while can only have limited interactions with the target domain. We propose a *decoupled representation learning* approach for addressing this problem. We perform representation learning only in the target domain and measure the representation deviations on the transitions from the source domain, which we show can be a signal of dynamics mismatch. The produced representations are not involved in either policy or value function, but only serve as a reward penalizer. Our method achieves superior performance on environments with kinematic and morphology mismatch.
 
