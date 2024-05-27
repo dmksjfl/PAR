@@ -5,7 +5,7 @@
 ## Brief Introduction
 We consider dynamics adaptation settings where there exists dynamics mismatch between the source domain and the target domain, and one can get access to sufficient source domain data, while can only have limited interactions with the target domain. We propose a *decoupled representation learning* approach for addressing this problem. We perform representation learning only in the target domain and measure the representation deviations on the transitions from the source domain, which we show can be a signal of dynamics mismatch. The produced representations are not involved in either policy or value function, but only serve as a reward penalizer. Our method achieves superior performance on environments with kinematic and morphology mismatch.
 
-Please see our paper here. (TBD)
+Please see our paper [here](https://arxiv.org/pdf/2405.15369) for more details.
 
 ## Method Overview
 
