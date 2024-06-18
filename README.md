@@ -15,6 +15,26 @@ Please see our paper [here](https://arxiv.org/pdf/2405.15369) for more details.
 
 We run our experiments with Pytorch 1.8 and Gym version 0.23.1. You probably need other packages like `tensorboardX`, `numpy`. Please let me know if you have trouble running the experiments.
 
+## Important Note
+
+In order to run the code, one has to revise the Gym code to pass the modified xml_file (since Gym -v2 environments do not support specifying the xml_file). For example, in the Hopper environment, we modify it to
+```python
+class HopperEnv(mujoco_env.MujocoEnv, utils.EzPickle):
+    def __init__(self, xml_file=None):
+        if xml_file is None:
+            xml_file = "hopper.xml"
+        mujoco_env.MujocoEnv.__init__(self, xml_file, 4)
+        utils.EzPickle.__init__(self)
+```
+
+One can also directly adopt Gym -v3/-v4 environment without any modifications on the source Gym code. To be specific, in `envs/common.py`,
+```python
+from gym.envs.mujoco.half_cheetah_v3   import HalfCheetahEnv
+from gym.envs.mujoco.walker2d_v3       import Walker2dEnv
+from gym.envs.mujoco.hopper_v3         import HopperEnv
+```
+Nevertheless, our experiments are conducted under **v2** environments for these tasks, we are not sure whether the reported results can be reproduced using v3/v4 environments.
+
 ## How to run
 
 To run this repo, you do not need to call `pip install -e .`. To reproduce our reported results in the submission, please check the following instructions:
