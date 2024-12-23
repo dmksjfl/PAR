@@ -68,9 +68,9 @@ if __name__ == "__main__":
     tar_env = call_env(config['tar_env_config'])
     tar_env.seed(args.seed)
     # eval env
-    src_eval_env = copy.deepcopy(src_env)
+    src_eval_env = call_env(config['src_env_config'])
     src_eval_env.seed(args.seed + 100)
-    tar_eval_env = copy.deepcopy(tar_env)
+    tar_eval_env = call_env(config['tar_env_config'])
     tar_eval_env.seed(args.seed + 100)
 
     # seed all
