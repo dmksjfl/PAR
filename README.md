@@ -7,6 +7,19 @@ We consider dynamics adaptation settings where there exists dynamics mismatch be
 
 Please see our paper [here](https://arxiv.org/pdf/2405.15369) for more details.
 
+## Important Note
+
+If you are interested in reproducing our results in the online setting, we recommend using the following hyperparameters:
+
+- ant/ant_morph: $\beta=0.01$ or $\beta=0.05$
+- halfcheetah: $\beta=5.0$ or $\beta=0.1$
+- halfcheetah_morph: $\beta=5.0$
+- hopper/hopper_morph: $\beta=0.05$ or $\beta=0.1$
+- walker: $\beta=0.1$
+- walker_morph: $\beta=0.1$ or $\beta=0.05$
+
+Please check [Issue #1](https://github.com/dmksjfl/PAR/issues/1) for more details
+
 ## Method Overview
 
 <img src="https://github.com/dmksjfl/PAR/blob/master/par.png" alt="image" width="600">
